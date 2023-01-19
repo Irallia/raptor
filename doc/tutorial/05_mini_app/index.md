@@ -26,16 +26,12 @@ simple, we will also include some functionalities from the Raptor app.
 * Implementing an indexer
     * Create and store index
 * Implementing a search
-    <!-- * Parse arguments
-    * Read and load input, search for approximate matches
-    * Align the search results
-    * Write final results into a SAM file -->
+    * Write final results into a search file
 
 # The data
 
 We provide an example [toy data set](https://ftp.imp.fu-berlin.de/pub/seiler/raptor/) (124 MiB compressed,
 983 MiB decompressed).
-
 
 ```bash
 wget https://ftp.imp.fu-berlin.de/pub/seiler/raptor/example_data.tar.gz
@@ -58,9 +54,21 @@ example_data
 # The parser
 
 ## Step 1 - Parsing arguments
-As a first step, we want to parse command line arguments for our index and search. If you get into trouble,
-you can take a peek at the \ref tutorial_argument_parser "Argument Parser Tutorial" or the API documentation of
-the seqan3::argument_parser for help.
+
+As a first step, we want to parse command line arguments for our index and search. In order not to blow up this tutorial
+too much, we give you the parser code. For more detailed explanations there is an extra tutorial for the
+[SeqAn Sharg parser](https://docs.seqan.de/sharg/main_user/tutorial_parser.html).
+
+\include doc/tutorial/05_mini_app/mini_app_parser_step1.cpp
+
+
+
+
+
+
+
+
+
 
 \assignment{Assignment 1: Parsing arguments}
 Let's start our application by setting up the argument parser with the following options:
